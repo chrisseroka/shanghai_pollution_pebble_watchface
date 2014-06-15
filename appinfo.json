@@ -1,0 +1,17 @@
+{
+  "uuid": "c62bbd02-5ba8-4620-8c3a-1e7b84181f75",
+  "shortName": "Shanghai Pollution Watchface",
+  "longName": "Shanghai Pollution Watchface",
+  "companyName": "Maverick Stoklosa",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "pm25": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
