@@ -12,8 +12,10 @@ function fetch_pollution_data(pos) {
         console.log('response received:');
         console.log(JSON.stringify(response));
         var pm25 = response[0].pm2_5;
+        var pm2524h = response[0].pm2_5_24h;
+        var aqi = response[0].aqi;
         console.log('pm25:'+pm25);
-        Pebble.sendAppMessage({"pm25": ""+pm25+""});
+        Pebble.sendAppMessage({"pm25": ""+pm25+"","pm2524h":""+pm2524h+"","aqi":""+aqi+""});
       } else {
       	console.log("Error");
       }
@@ -24,5 +26,10 @@ function fetch_pollution_data(pos) {
 
 Pebble.addEventListener("ready", function(e) {
   console.log('Starting Shanghai Pollution Watchface');
+  fetch_pollution_data();
+});
+
+
+Pebble.addEventListener("appmessage", function(e) {
   fetch_pollution_data();
 });

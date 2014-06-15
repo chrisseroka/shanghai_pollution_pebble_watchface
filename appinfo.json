@@ -9,7 +9,9 @@
     "watchface": true
   },
   "appKeys": {
-    "pm25": 0
+    "pm25": 0,
+    "pm2524h": 1,
+    "aqi": 2
   },
   "resources": {
     "media": []
