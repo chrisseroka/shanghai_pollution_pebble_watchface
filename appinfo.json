@@ -1,8 +1,8 @@
 {
   "uuid": "c62bbd02-5ba8-4620-8c3a-1e7b84181f75",
   "shortName": "China AQI Watchface",
-  "longName": "China air quality index watchface",
-  "companyName": "Maverick Stoklosa",
+  "longName": "China AQI watchface",
+  "companyName": "Maverick Stoklosa & Lee Turner",
   "versionCode": 1,
   "versionLabel": "1.0.0",
   "watchapp": {
