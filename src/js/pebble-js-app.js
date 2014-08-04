@@ -1,6 +1,6 @@
-var city = 'beijing';
 function fetch_pollution_data(pos) {
   var req = new XMLHttpRequest(),
+  city = localStorage.getItem("city"),
   version = Date.now(),
   token = 'XAs1txvhW9Y3rmxqK4zA';
   req.open('GET', 'http://www.pm25.in/api/querys/pm2_5.json?city='+city+'&token='+token+'&stations=no', true);
@@ -33,10 +33,12 @@ Pebble.addEventListener("appmessage", function(e) {
 });
 
 Pebble.addEventListener("showConfiguration", function(e) {
-  Pebble.openURL('https://raw.githubusercontent.com/lvx3/shanghai_pollution_pebble_watchface/master/configurable.html');
+  Pebble.openURL('https://rawgit.com/lvx3/shanghai_pollution_pebble_watchface/master/configurable.html');
 });
 
 Pebble.addEventListener("webviewclosed", function(e) {
   var options = JSON.parse(decodeURIComponent(e.response));
-  city = options.city;
+  console.log(JSON.stringify(options));
+  localStorage.setItem("city", options.city);
+  fetch_pollution_data();
 });
