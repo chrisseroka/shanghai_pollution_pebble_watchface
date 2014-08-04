@@ -1,7 +1,7 @@
-Shanghai Pollution Pebble Watchface
+China AQI Pebble Watchface
 ===================================
 
-Displays the current Air Quality Index and PM2.5 concentrations for Shanghai China right on your Pebble watch.  Statitics include: 
+Displays the current Air Quality Index and PM2.5 concentrations for any city in China supported by pm35.in right on your Pebble watch.  Statitics include: 
 
 1. Air Quality Index
 2. PM2.5 concentration for the past 1 hour
