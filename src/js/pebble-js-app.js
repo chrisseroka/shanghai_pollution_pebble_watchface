@@ -37,8 +37,9 @@ Pebble.addEventListener("showConfiguration", function(e) {
 });
 
 Pebble.addEventListener("webviewclosed", function(e) {
+  console.log("Response: " + e);
   var options = JSON.parse(decodeURIComponent(e.response));
   console.log(JSON.stringify(options));
-  localStorage.setItem("city", options.city);
+  localStorage.setItem("city", options.city.toLowerCase());
   fetch_pollution_data();
 });
